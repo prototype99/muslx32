@@ -7,7 +7,7 @@ inherit autotools-utils flag-o-matic linux-info systemd
 
 DESCRIPTION="Load another kernel from the currently executing Linux kernel"
 HOMEPAGE="https://kernel.org/pub/linux/utils/kernel/kexec/"
-SRC_URI="mirror://kernel/linux/utils/kernel/kexec/${P}.tar.xz"
+SRC_URI="https://www.kernel.org/pub/linux/utils/kernel/kexec/${P/_/-}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"

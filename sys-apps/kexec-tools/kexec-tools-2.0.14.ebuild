@@ -3,14 +3,8 @@
 
 EAPI="5"
 
-if [[ ${PV} == "9999" ]] ; then
-	inherit git-r3
-	EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/kernel/kexec/kexec-tools.git"
-	AUTOTOOLS_AUTORECONF=true
-else
-	SRC_URI="mirror://kernel/linux/utils/kernel/kexec/${P}.tar.xz"
-	KEYWORDS="amd64 ~arm64 x86"
-fi
+SRC_URI="https://www.kernel.org/pub/linux/utils/kernel/kexec/${P/_/-}.tar.xz"
+KEYWORDS="amd64 ~arm64 x86"
 
 inherit autotools-utils linux-info systemd
 
